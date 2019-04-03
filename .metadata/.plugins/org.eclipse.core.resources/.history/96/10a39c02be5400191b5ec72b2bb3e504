@@ -1,0 +1,14 @@
+package newToursWebApplication;
+
+public class RegisterMercuryTours {
+	
+@FindBy (name = "firstName")
+WebElement FirstName;
+
+public void FirstName() 
+
+{
+	
+FirstName.sendkeys();
+}
+}

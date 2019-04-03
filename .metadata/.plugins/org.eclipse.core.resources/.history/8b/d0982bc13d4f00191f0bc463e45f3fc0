@@ -1,0 +1,181 @@
+package newToursWebApplication;
+import java.io.FileInputStream;
+
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class WelcomeMercuryTours {
+	
+@FindBy(linkText = "SIGN-ON")
+WebElement signon;
+
+public void Signon()
+{
+signon.click();
+}
+
+@FindBy(linkText = "REGISTER")
+WebElement Register;
+
+public void Register()
+
+{
+Register.click();
+
+}
+
+@FindBy(linkText = "SUPPORT")
+WebElement Support;
+
+public void Support() 
+{
+	
+Support.click();
+}
+
+@FindBy(linkText = "CONTACT")
+WebElement Contact;
+
+public void Contact()
+{
+Contact.click();	
+}
+
+@FindBy (name = "userName")
+WebElement UserName;
+
+@FindBy(name = "password")
+WebElement password;
+
+
+@FindBy(name = "login")
+WebElement SignIn;
+
+
+
+
+public void login(String userName, String pwd) {
+	
+	UserName.clear();
+	UserName.sendKeys(userName);
+	password.sendKeys(pwd);
+	SignIn.click();
+}
+
+
+
+@FindBy(linkText ="your destination")
+WebElement Destinations;
+public void Destinations()
+
+{
+	Destinations.click();
+}
+
+
+@FindBy(linkText = "featured vacation destinations")
+WebElement Vacations;
+public void Vacations()
+{
+	Vacations.click();
+}
+
+
+
+@FindBy(linkText = "Register here")
+WebElement RegisterHere;
+public void RegisterHere()
+{
+	
+	RegisterHere.click();
+}
+
+
+@FindBy(partialLinkText = "Business")
+WebElement Links;
+public void Links()
+{
+	
+    Links.click();
+	
+}
+
+//<a href="mercurywelcome.php">Home</a>
+
+@FindBy(linkText = "Home")
+WebElement Home;
+public void Home() {
+	Home.click();
+}
+
+@FindBy (linkText = "Flights")
+WebElement Flights;
+public void Flights() {
+	Flights.click();
+}
+
+//<a href="mercuryunderconst.php">Hotels</a>
+
+@FindBy(linkText = "Hotels")
+WebElement Hotels;
+public void Hotels() {
+	Hotels.click();
+}
+
+@FindBy(partialLinkText = "Rentals")
+WebElement CarRentals;
+public void CarRentals() {
+	CarRentals.click();
+}
+
+@FindBy(linkText = "Cruises")
+WebElement Cruises;
+public void Cruises() {
+	Cruises.click();
+}
+
+
+@FindBy(linkText = "Destinations")
+WebElement Destinations1;
+public void Destinations1() {
+	Destinations.click();
+}
+	
+@FindBy (linkText = "Vacations")
+WebElement Vacations1;
+public void Vacations1() {
+	Vacations.click();
+}
+}
+
+//<img src="/images/hdr_specials.gif" width="270" height="20" alt="Specials">
+
+/*@FindBy (tagName=("img"))
+WebElements Images;
+public void Images() {
+System.out.println(ImageURL);*/
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

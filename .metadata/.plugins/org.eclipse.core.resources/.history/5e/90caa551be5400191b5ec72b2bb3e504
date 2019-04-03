@@ -1,0 +1,27 @@
+package newToursWebApplication;
+
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
+public class NewTours_Resgister extends BaseTest {
+	
+	@Test
+	
+	public void Register() {
+	RegisterMercuryTours RMT = PageFactory.initElements(driver, RegisterMercuryTours.class);
+	
+	RMT.FirstName();
+	RMT.LastName();
+	RMT.Phone();
+	RMT.email();
+	RMT.Address();
+	RMT.City();
+	RMT.State/Province();
+	RMT.Postalcode();
+	
+	
+	
+	
+
+}
+}
