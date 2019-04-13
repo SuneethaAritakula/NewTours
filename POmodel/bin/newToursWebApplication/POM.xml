@@ -1,0 +1,7 @@
+<suite name="newToursWebApplication">
+<test name="NewTours HomePage"> 
+<classes>
+<class name="newToursWebApplication.NewTours_HomePage"/>
+</classes>
+</test>
+</suite>

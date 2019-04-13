@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 public class BaseTest {
 	
@@ -21,7 +22,13 @@ public void setUp() {
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 	
-}
+	
+	//@Test
+	
+	//public void login() {
+	//}
+	
+//}
 	
 	
 	
@@ -33,7 +40,7 @@ public void setUp() {
 	
 	//Questions - 
 	
-}
+}}
 
 
 

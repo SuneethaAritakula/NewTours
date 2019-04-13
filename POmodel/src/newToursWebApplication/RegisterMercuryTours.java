@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class RegisterMercuryTours {
 	
-	@FindBy(linkText = "REGISTER")
+	@FindBy(partialLinkText = "REGISTER")
 	WebElement Register;
 
 	public void Register()
@@ -17,17 +17,14 @@ public class RegisterMercuryTours {
 
 	}
 	
-
 @FindBy (name = "firstName")
 WebElement  FirstName;
 
 @FindBy(name = "lastName")
 WebElement lastName;
 
-
 @FindBy(name = "phone")
-WebElement Phone;
-
+WebElement phone;
 
 ////*[@id="userName"]
 @FindBy(xpath = "//*[@id='userName']")
@@ -42,11 +39,49 @@ WebElement city;
 @FindBy(name = "state")
 WebElement StateProvince;
 
-@FindBy(name = "postalcode")
+@FindBy(name = "postalCode")
 WebElement Postalcode;
 
-@FindBy(name = "country")
+@FindBy(name="country")
 WebElement Country;
+
+
+public void newuserregistration(String firstName, String lastname, String phonenumber, String email, String addressline1, String state,String City, String postalcode, String country) 
+{
+FirstName.sendKeys(firstName);
+lastName.sendKeys(lastname);
+phone.sendKeys(phonenumber);
+Email.sendKeys(email);
+Addressline1.sendKeys(addressline1);
+city.sendKeys(City);
+StateProvince.sendKeys(state);
+Postalcode.sendKeys(postalcode);
+Country.sendKeys(country);
+}
+
+//public void phonenumber (String phonenumber)
+//double d = r.getCell(2).getNumericCellValue();
+ //long x= (long)d;
+ //String phonenumber =Long.toString(x)
+//Phone.sendKeys(phonenumber);
+/*public void Country(String country1) 
+{
+	//Select contryseletion = new Select
+	//countryselection.selectByVisibleText("INDIA");
+	Country1.sendKeys(country1);
+}*/
+//FindBy(name = "country")
+//WebElement Country;
+
+//public void Country1()
+
+//{
+	//Select countryselection = new Select(Country1);
+	//countryselection.selectByVisibleText("INDIA");
+	
+	//Country.sendKeys("INDIA");
+//}
+
 
 @FindBy(id = "email")
 WebElement UserName;
@@ -54,23 +89,25 @@ WebElement UserName;
 @FindBy(name = "password")
 WebElement password;
 
-@FindBy(name = "confirmpassword")
+@FindBy(name = "confirmPassword")
 WebElement confirmpassword;
 
+@FindBy(name = "register")
+WebElement Submit;
 
+public void settingupanaccount(String username, String Password, String Confirmpassword)
 
-public void newuserregistration(String firstName, String lastname, String phone, String email, String addressline1, String state,String City, String postalcode, String country, String username, String Password, String Confirmpassword) {
-FirstName.sendKeys(firstName);
-lastName.sendKeys(lastname);
-Phone.sendKeys(phone);
-Email.sendKeys(email);
-Addressline1.sendKeys(addressline1);
-city.sendKeys(City);
-StateProvince.sendKeys(state);
-Postalcode.sendKeys(postalcode);
-Country.sendKeys(country);
+{
+	UserName.clear();
 UserName.sendKeys(username);
+password.clear();
 password.sendKeys(Password);
+confirmpassword.clear();
 confirmpassword.sendKeys(Confirmpassword);
+Submit.click();
+System.out.println();
 
-}}
+}
+
+
+}
